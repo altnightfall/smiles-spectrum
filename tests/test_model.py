@@ -35,6 +35,7 @@ def test_spectrum_to_vector():
 
 def test_build_dataset():
     """Тест сборки датасета"""
+    tm.download_dataset()
     X, y, _ = tm.build_dataset(limit=5)
     assert X.shape[0] == y.shape[0], "Количество X и y должно совпадать"
     assert X.shape[1] == 2048, "Размер X должен быть 2048"
@@ -43,6 +44,7 @@ def test_build_dataset():
 
 def test_model_inference():
     """Тест загрузки модели и инференса"""
+    tm.download_dataset()
     if not os.path.exists(MODEL_PATH):
         pytest.skip("Модель не найдена, пропуск инференса")
     model = load_model(MODEL_PATH)
