@@ -18,16 +18,23 @@ cd smiles-spectrum
 uv sync
 ```
 ## Использование
+### Docker
 
-### Backend
+```bash
+make deploy
+```
+
+### Host
+
+#### Backend
 ```bash
 uv run uvicorn backend.app.main:app --reload --port 8000
 ```
-### Frontend
+#### Frontend
 ```bash
 uv run streamlit run .\frontend\app.py
 ```
-### Тесты
+#### Тесты
 ```bash
 uv run coverage run -m pytest
 ```
