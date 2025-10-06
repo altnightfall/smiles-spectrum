@@ -1,12 +1,15 @@
 """Frontend-приложение"""
 
+import os
+
 import altair as alt
 import pandas as pd
 import requests
 import streamlit as st
 
 # Набор настроек для приложения
-API_URL = st.sidebar.text_input("API URL", "http://localhost:8000")
+DEFAULT_API_URL = os.getenv("API_URL", "http://localhost:8000")
+API_URL = st.sidebar.text_input("API URL", DEFAULT_API_URL)
 st.title("MS Predictor — Multi SMILES Demo")
 
 # Основная логика работы frontend
