@@ -4,6 +4,7 @@ WORKDIR /app
 
 COPY /backend /app/.
 COPY ./pyproject.toml /app/.
+COPY ./.python-version /app/.
 
 RUN python -m pip install --upgrade pip setuptools wheel && \
     pip install uv

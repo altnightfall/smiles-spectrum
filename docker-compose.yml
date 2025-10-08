@@ -9,7 +9,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./backend/app/model:/app/backend/app/model:ro
+      - ./backend/app/models:/app/backend/app/models:ro
     restart: unless-stopped
 
   frontend:

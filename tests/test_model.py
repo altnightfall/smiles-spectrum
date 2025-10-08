@@ -9,10 +9,10 @@ from tensorflow.keras.models import (  # pylint: disable=import-error,no-name-in
     load_model,
 )
 
-from backend.app.model import train_model as tm
+from backend.app.models import train_model_mass as tm
 
 DATA_DIR = "train_data"
-MODEL_PATH = "backend/app/model/spectrum_predictor.keras"
+MODEL_PATH = "backend/app/models/spectrum_predictor.keras"
 SCALER_PATH = os.path.join(DATA_DIR, "spectrum_scaler.pkl")
 
 
